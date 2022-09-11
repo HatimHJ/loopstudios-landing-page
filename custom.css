@@ -1,0 +1,106 @@
+body{
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300 !important;
+}
+.alata{
+  font-family: 'Alata', sans-serif;
+  font-weight: 400 !important;
+}
+@media (min-width:768px) {
+  .mobile-hide{
+    display: none;
+  }  
+}
+@media (max-width:767px) {
+  .desktop-hide{
+    display: none;
+  }  
+}
+.sr-only{
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 10rem;
+  left: 10rem;
+  
+}
+
+/* ========================================
+/* Hero Section
+  ========================================*/
+.hero{
+  background-image: url(./images/mobile/image-hero.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  min-height: 100vh;
+}
+.navbar ul{
+  display: flex;
+}
+.hide{
+  display: none;
+}
+.content h1{
+  font-size: 1rem;
+}
+/* ========================================
+/* When Nav Menu Open In Small Screen 
+  ========================================*/
+.hero.opened{
+  background: black;
+}
+.opened .close{
+  display: block;
+}
+.opened .open{
+  display: none;
+}
+.opened nav{
+  display: block;
+}
+.opened .content{
+  display: none;
+}
+/* ======================================
+  Media Query
+========================================*/
+
+@media screen and (min-width:375px) {
+  .content h1{
+    font-size: 2rem;
+  }
+}  
+@media screen and (min-width:768px) {
+  .hero{
+    background-image: url(./images/desktop/image-hero.jpg);
+    background-size: 100% 650px;
+  }
+  .toggler{
+    display: none;
+  }
+  .navbar nav{
+    display: block;
+    bottom: auto;
+    position: static;
+    transform: translateY(0);
+  }
+  .navbar ul{
+    flex-direction: row;
+  }
+  .content {
+    position: relative;
+    max-width: 500px;
+    margin-left: 0;
+  }
+}
+@media screen and (min-width:1024px) {
+  .hero{
+    min-height: 650px;
+  }
+  .content {
+    position: relative;
+  }
+  .content h1{
+    /* font-size: 3rem; */
+  }
+}
